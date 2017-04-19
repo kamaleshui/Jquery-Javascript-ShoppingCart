@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BackBone Demo</title>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+        <script src="shop.js"></script>
+    </head>
+
+
+<body>
+
+<div id="MainComponent">
+    <div class="container" id="container">
+        <img id="image" alt="image" src="http://www.realmenrealstyle.com/wp-content/uploads/2016/01/ledbury-tuxedo-e1452718066567.jpg" width="300" height="500">
+        <br>
+        <br>
+    </div>
+</div>
+<div id="ModuleSelect">
+    <h3>Please Select color, size and quantity</h3>
+    <div id="SelectSize">
+        <h4> Size selection dialog</h4>
+        <form id="sizes">
+            <input type="radio" name="sizes" value="2S" > Small
+            <br>
+            <input type="radio" name="sizes" value="3M"> Medium
+            <br>
+            <input type="radio" name="sizes" value="4L"> large
+        </form>
+    </div>
+
+    <div id="color-selection" >
+        <h4> color selection dialog</h4>
+        <form id="SelectColor">
+            <input type="radio" name="color" value="Blue">Blue
+            <br>
+            <input type="radio" name="color" value="Pink">Pink
+            <br>
+            <input type="radio" name="color" value="brown">Brown
+            <br>
+        </form>
+    </div>
+    <div id="SelectQty">
+        <h4> quantity selection dialog</h4>
+        <select name='QtySelector' id="selectQuantity">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+        </select>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+</div>
+<button id="next"> Next Page</button>
+<button id="back">Back</button>
+<div id=shipaddress hidden>
+    <h2>
+        Shipping Address
+    </h2>
+    <div>
+        <label>AddressOne</label>
+        <input type="text" required name="address1" id="addOne"  placeholder="Address"/>
+    </div>
+    <div>
+        <label>AddressTwo</label>
+        <input type="text" name="address2" id="addTwo" placeholder="Address2"/>
+    </div>
+    <div>
+        <label>City</label>
+        <input type="text" name="city" id="city" placeholder="City"/>
+    </div>
+    <div>
+        <label>State</label>
+        <input type="text" name="state" id="state" placeholder="State"/>
+    </div>
+    <div>
+        <label>ZipCode</label>
+        <input type="number" name="zipcode" id="zipcode" placeholder="Zipcode"/>
+    </div>
+    <div>
+        <button type="button" id="finish">Finish</button>
+    </div>
+</div>
+
+<br>
+<br>
+<div id=analyticsinfo hidden>
+    <h3>Product Details</h3>
+    <div>
+        <table id="tableofdetails">
+            <tr>
+                <th>Size</th>
+                <th>color</th>
+                <th>quantity</th>
+            </tr>
+        </table>
+    </div>
+    <br> Will be shipped to :
+    <div id="ship-Address">
+
+    </div>
+</div>
+
+</body>
+</html>
